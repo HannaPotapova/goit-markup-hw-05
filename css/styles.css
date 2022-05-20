@@ -78,16 +78,16 @@ h1, h2, h3, p, ul {
     position: relative;
 }
 .site-nav .link.current::after {
-display: inline-block;
-position: absolute;
-content: "";
-width: 100%;
-height: 4px;
-bottom: 0;
-left: 0;
-background: var(--btn-bg-color);
-border-radius: 2px;
-opacity: 1;
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: var(--btn-bg-color);
+    border-radius: 2px;
+    opacity: 1;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -127,10 +127,10 @@ opacity: 1;
     margin-right: 30px;
 }
 .connection-icons {
-        display: flex;
-        width: 16px;
-        height: 16px;        
-        margin-right: 10px;        
+    display: flex;
+    width: 16px;
+    height: 16px;        
+    margin-right: 10px;        
     }
 .connection .link {
     display: flex;
@@ -198,6 +198,7 @@ opacity: 1;
     padding: 10px 32px;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
 .btn.primary:hover {
     color: var(--white-text-color);
@@ -210,29 +211,50 @@ opacity: 1;
 }
 .backdrop {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.modal {
+    z-index: 1;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 528px;
     height: 581px;
+
     background-color: var(--primary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
     opacity: 1;
     visibility: visible;
+    display: flex;
+    justify-content: flex-end;
 }
+
 .btn-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid #0000001A;
     background-color: var(--primary-bg-color);
+    color: #000000;
+    cursor: pointer;
+    padding: 0;
 }
-.modal {
-    display: flex;
-    margin-top: 8px;
-    margin-right: 8px;
-    justify-content: flex-end;
+.page-header {
+    position: relative;
 }
 
 /*Features*/
@@ -265,7 +287,6 @@ opacity: 1;
 }
 .icons-feature {
     display: flex;
-    /* width: 270px; */
     height: 120px;
     background-color: var(--title-bg-color);
     border-radius: 4px;
@@ -299,32 +320,27 @@ opacity: 1;
     max-width: 100%;
     height: auto;
 }
-.photo-work .list {
+.photo-work .list{
     position: relative;
 }
-.label::before {
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-content: "Десктопные приложения";
-width: 100%;
-height: 70px;
-bottom: 0;
-left: 0;
-background-color: #2F303ACC;
 
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
-color: var(--white-text-color);
+.case-title {
+    position: absolute;
+    content: "";
+    padding-top: 27px;
+    padding-bottom: 27px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
 
-opacity: 0;
-}
-.label:hover::before {
-opacity: 1;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    background-color: #2F303ACC;
 }
 
 /*Team*/
@@ -412,6 +428,32 @@ opacity: 1;
     
     font-size: 16px;
     line-height: 1.87;
+}
+.collection {
+    position: relative;
+}
+
+.collection-list {
+    position: absolute;
+    content: "";
+    width: 370px;
+    height: 294px;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    
+    color: var(--white-text-color);
+
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+}
+.collection-list:hover {
+    opacity: 1;
 }
 
 /*Button portfolio*/
